@@ -41,7 +41,7 @@ class TestVerification extends TestValidation
                         '<span aria-hidden="true">&times;</span></button></p>';
                 }
             } else {
-                echo '<p class="bg-success correct-responses">Вы ответили правильно на все впоросы' .
+                echo '<p class="bg-success correct-responses">Вы ответили правильно на все вопросы' .
                     '<button type="button" class="close" aria-label="Close">'.
                     '<span aria-hidden="true">&times;</span></button></p>';
             }
@@ -50,20 +50,18 @@ class TestVerification extends TestValidation
 
     protected function isTrueAnswerOne($field)
     {
-        $value = 0;
-        if (!empty($this->_form[$field])) {
-            $value = floatval($this->_form[$field]);
+        if (count(explode(" ", $this->_form[$field])) >= 30) {
+            return true;
         }
-        return $value == 36.6;
+        return false;
     }
 
     protected function isTrueAnswerTwo($field)
     {
-        $value = 0;
         if (!empty($this->_form[$field])) {
-            $value = floatval($this->_form[$field]);
+            return $this->_form[$field] == 'true';
         }
-        return $value == 0.7;
+        return false;
     }
 
     protected function isTrueAnswerThree($field)
@@ -78,6 +76,7 @@ class TestVerification extends TestValidation
     {
         switch ($error) {
             case 'answer-one':
+                return 'Ответ должен быть не менее, чем на 30 слов!';
             case 'answer-two':
             case 'answer-three':
                 return 'Неправильный ответ на вопрос. ';

@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Персональный сайт Гридасовой Карины. Связь со мной.</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Персональный сайт Герцовской Карины. Связь со мной.</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body onload = "hideCalendar(); sessionStorageHistory('Связь со мной'); setCookie('Связь со мной')">
 <div class="wrapper">
@@ -11,7 +11,7 @@
         <div class="currentTime" id="currentTime"></div>
         <a name="top"></a>
         <header>
-            <h1>Вы попали на персональный сайт <br> Гридасовой Карины Владиславовны</h1>
+            <h1>Вы попали на персональный сайт <br> Герцовской Карины Владиславовны</h1>
         </header>
         <nav>
             <ul class="mainMenu">
@@ -31,7 +31,7 @@
         <section>
             <form id="contacts" method="post" onchange="<?Validation::validate()?>" name="contactsForm" role="form">
 <!--                onchange="checkedForm()"-->
-                <h3>Для связи со мной напишите свои личные данные и задайте вопрос.</h3>
+                <h3>Для связи со мной напишите свои личные данные и, по желанию, задайте вопрос.</h3>
                 <p>Ваше ФИО:<br>
                     <input
                         id="fullName"
@@ -101,7 +101,7 @@
     </footer>
 </div>
 <script src="script/jquery-3.3.1.min.js"></script>
-<script src="script/check.js"></script>
+<!--<script src="script/check.js"></script>-->
 <script src="script/onMenuHoverBackgr.js"></script>
 <script src="script/calendar.js"></script>
 <script src="script/sessionStorageHistory.js"></script>

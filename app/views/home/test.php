@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Персональный сайт Гридасовой Карины. Тестирование.</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Персональный сайт Герцовской Карины. Тестирование.</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 <!--    <script src="script/checkTest.js"></script>-->
     <script src="script/onMenuHoverBackgr.js"></script>
     <script src="script/sessionStorageHistory.js"></script>
@@ -15,7 +15,7 @@
         <div class="currentTime" id="currentTime"></div>
         <a name="top"></a>
         <header>
-            <h1>Вы попали на персональный сайт <br> Гридасовой Карины Владиславовны</h1>
+            <h1>Вы попали на персональный сайт <br> Герцовской Карины Владиславовны</h1>
         </header>
         <nav>
             <ul class="mainMenu">
@@ -34,7 +34,7 @@
         </nav>
         <section>
             <h2>Тест по дисциплине "Безопасность жизнедеятельности"</h2>
-            <form id="tests" action="mailto:quartz_90@mail.ru" method="post" name="testForm">
+            <form id="tests" method="post" name="testForm">
 <!--                  onsubmit="return checkTestData()"-->
                 <fieldset class="fSet1">
                     <legend>Заполните все поля и дайте правильные ответы</legend>
@@ -71,24 +71,24 @@
                         <legend>Вопрос №1</legend>
                         <p>Чрезвычайные ситуации техногенного характера (классификация, причины их возникновения, последствия,
                             ликвидация и действие населения на любом примере ЧС техногенного характера.<br>
-                            <textarea name="answer" placeholder="Напишите свой ответ" data-tooltip-message="Напишите ответ. Не менее 30 слов"></textarea>
+                            <textarea name="answer1" placeholder="Напишите свой ответ" data-tooltip-message="Напишите ответ. Не менее 30 слов"></textarea>
                         </p>
                     </fieldset>
                     <fieldset class="fSet3" title="Выберите один из вариантов">
                         <legend>Вопрос №2</legend>
                         <p class="focusP">Убежища малой вместительности:<br>
-                            <label data-tooltip-message="Выберите правильный ответ" for="ans0"><input id="ans0" type="radio" name="answer_r" value="r1">до 100 чел.<br></label>
-                            <label data-tooltip-message="Выберите правильный ответ" for="ans1"><input id="ans1" type="radio" name="answer_r" value="r2">до 600 чел.<br></label>
-                            <label data-tooltip-message="Выберите правильный ответ" for="ans2"><input id="ans2" type="radio" name="answer_r" value="r3">до 1000 чел.<br></label>
+                            <label data-tooltip-message="Выберите правильный ответ" for="ans0"><input id="ans0" type="radio" name="answer2" value="false">до 100 чел.<br></label>
+                            <label data-tooltip-message="Выберите правильный ответ" for="ans1"><input id="ans1" type="radio" name="answer2" value="true">до 600 чел.<br></label>
+                            <label data-tooltip-message="Выберите правильный ответ" for="ans2"><input id="ans2" type="radio" name="answer2" value="false">до 1000 чел.<br></label>
                         </p>
                     </fieldset>
                     <fieldset class="fSet4" title="Выберите один из вариантов">
                         <legend>Вопрос №3</legend>
                         <p>Признаки отравления угарным газом?<br>
-                            <select data-tooltip-message="Выберите правильный ответ" class="focusSelect" size="1" name="answ_sel">
+                            <select data-tooltip-message="Выберите правильный ответ" class="focusSelect" size="1" name="answer3">
                                 <option disabled selected>Выберите ответ</option>
-                                <option value="true_1">Слабость, тошнота, рвота, головокружение, покраснение кожных покровов</option>
-                                <option value="false_0">Слабость, головокружение, побледнение кожных покровов</option>
+                                <option value="true">Слабость, тошнота, рвота, головокружение, покраснение кожных покровов</option>
+                                <option value="false">Слабость, головокружение, побледнение кожных покровов</option>
                             </select>
                         </p>
                     </fieldset>
@@ -113,6 +113,7 @@
 </div>
 <script src="script/jquery-3.3.1.min.js"></script>
 <script src="script/currentTime.js"></script>
+<script src="script/validationMessage.js"></script>
 <script src="script/tooltips.js"></script>
 </body>
 </html>

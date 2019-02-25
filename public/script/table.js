@@ -77,9 +77,9 @@ const data = [
 ];
 
 (function($) {
-	for (let i=0; i<data.length; i++) {
-		$('.img-list').append(`<li><a href="img/${data[i].src}" title="${data[i].title}"><img src="img/${data[i].srcSmall}">${data[i].title}</a></li>`);
-	}
+	// for (let i=0; i<data.length; i++) {
+	// 	$('.img-list').append(`<li><a href="img/${data[i].src}" title="${data[i].title}"><img src="img/${data[i].srcSmall}">${data[i].title}</a></li>`);
+	// }
 
 	var $li = $('.img-list').find('> li'),
 		$links = $li.find('> a'),

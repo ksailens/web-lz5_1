@@ -2,9 +2,6 @@
 
 class Home extends Controller
 {
-    private static $photos;
-    private static $alts;
-
     public function __construct()
     {
         parent::__construct();
@@ -45,7 +42,7 @@ class Home extends Controller
                 'pol' => 'required',
                 'dateOfBirth' => 'required',
                 'email' => 'email',
-                'tel' => 'required'
+                'tel' => 'tel'
             ]);
         }
         $this->view->generate($this->className . 'contacts', compact('errors'));
@@ -57,10 +54,10 @@ class Home extends Controller
         $responses = [];
         if (!empty($_POST)) {
             $errors = TestValidation::run([
-                'name' => 'required,fio',
-                'group' => 'required',
+                'FIO' => 'required,fio',
+                'groups' => 'required',
                 'answer1' => 'required',
-                'answer2' => 'required,float',
+                'answer2' => 'required',
                 'answer3' => 'required'
             ]);
             $responses = TestVerification::run([
@@ -77,29 +74,37 @@ class Home extends Controller
         $this->view->generate($this->className . 'history');
     }
 
-//    public static function printPhotos()
-//    {
-//        self::$photos = [];
-//        self::$alts = [];
-//        for ($i = 0; $i < 15; $i++) {
-//            self::$photos[$i] = "/img/gallery/" . ($i + 1) . ".jpg";
-//            self::$alts[$i] = "Фотография " . ($i + 1);
-//        }
-//        for ($i = 0; $i < count(self::$photos); $i++) {
-//            printf("<div class='item'>");
-//            printf("<img class='photo' src='%s' title='%s' alt='%s'>", self::$photos[$i], self::$alts[$i], self::$alts[$i]);
-//            printf("<span class='item_title'>%s</span>", self::$alts[$i]);
-//            printf("</div>");
-//        }
-//    }
-//
-//    public static function printList($type)
-//    {
-//        $args = func_get_args();
-//        echo "<" . $type . "l>";
-//        for ($i = 1; $i < func_num_args(); $i++) {
-//            echo "<li>" . $args[$i] . "</li>";
-//        }
-//        echo "</" . $type . "l>";
-//    }
+    public static function showList($list, $type, $class, $ob) {
+        if ($type == 0) {
+            echo "<ul class = ". $class . " " ." type = ".$ob. ">";
+        }
+        else
+            if ($type == 1) {
+                echo "<ol class = ". $class . " " ."type = ".$ob. ">";
+            }
+        for ($i = 0; $i < count($list); $i++) {
+            echo "<li>$list[$i]</li>";
+        }
+        if ($type == 0) {
+            echo '</ol>';
+        }  else {
+            echo '</ul>';
+        }
+    }
+
+    public static function photoGallery(){
+        $hrefs = array("img/cirilla.jpg", "img/doctor_who.jpg", "img/dovakin.jpg", "img/geralt.jpg", "img/illidan.jpg",
+            "img/jaina.jpeg", "img/Jean.jpeg", "img/konstantin.jpg", "img/legolas.jpg", "img/neo.jpg","img/ragnaros.jpg",
+            "img/silvana.jpeg", "img/tauriel.jpg", "img/thrall.jpg", "img/tiranda.png");
+        $srcs = array("img/cirilla-sm.jpg", "img/doctor_who-sm.jpg", "img/dovakin-sm.jpg", "img/geralt-sm.jpg", "img/illidan-sm.jpg",
+            "img/jaina-sm.jpg", "img/Jean-sm.jpg", "img/konstantin-sm.jpg", "img/legolas-sm.jpg", "img/neo-sm.jpg","img/ragnaros-sm.jpg",
+            "img/silvana-sm.jpg", "img/tauriel-sm.jpg", "img/thrall-sm.jpg", "img/tiranda-sm.png");
+        $alts = array("Цирилла","Доктор Кто","Довакин","Геральт","Иллидан",
+            "Джайна Праудмур","Джин Грей","Джон Константин","Леголас","Нео",
+            "Рагнарос","Сильвана Ветрокрылая","Тауриэль","Тралл","Тиранда Шелест Ветра");
+        for ($i = 0; $i < count($alts); $i++) {
+            echo "<li><a href=$hrefs[$i]  title=$alts[$i]> <img src=$srcs[$i] alt=$alts[$i]>$alts[$i] </a></li>";
+        }
+    }
+
 }

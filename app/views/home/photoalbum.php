@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Персональный сайт Гридасовой Карины. Фотоальбом.</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Персональный сайт Герцовской Карины. Фотоальбом.</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script src="script/onMenuHoverBackgr.js"></script>
     <script src="script/sessionStorageHistory.js"></script>
     <script src="script/globalHistory.js"></script>
@@ -14,7 +14,7 @@
         <div class="currentTime" id="currentTime"></div>
         <a name="top"></a>
         <header>
-            <h1>Вы попали на персональный сайт <br> Гридасовой Карины Владиславовны</h1>
+            <h1>Вы попали на персональный сайт <br> Герцовской Карины Владиславовны</h1>
         </header>
         <nav>
             <ul class="mainMenu" id="mainMenu">
@@ -34,7 +34,11 @@
         <section>
             <h2>Мой фотоальбом</h2>
             <div class="gallery">
-                <ul class="img-list"></ul>
+                <ul class="img-list">
+                    <?php
+                        Home::photoGallery();
+                    ?>
+                </ul>
                 <div class="lightbox">
                     <div class="overlay"></div>
                     <figure>

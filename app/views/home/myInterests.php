@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Персональный сайт Гридасовой Карины. Мои интересы.</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="script/list.js"></script>
+    <title>Персональный сайт Герцовской Карины. Мои интересы.</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script src="script/sessionStorageHistory.js"></script>
     <script src="script/globalHistory.js"></script>
 </head>
@@ -14,7 +13,7 @@
         <div class="currentTime" id="currentTime"></div>
         <a name="top"></a>
         <header>
-            <h1>Вы попали на персональный сайт <br> Гридасовой Карины Владиславовны</h1>
+            <h1>Вы попали на персональный сайт <br> Герцовской Карины Владиславовны</h1>
         </header>
         <nav>
             <ul class="mainMenu">
@@ -38,25 +37,37 @@
             <a href="#loveBook">Любимые книги</a>
             <a href="#loveCinema" class="last">Любимые фильмы</a>
             <div class="clear"></div>
+
             <a name="hobbi"></a>
-            <script>
-                list("u","myHobbies","circle","Крепко спать","Вкусно есть")
-            </script>
+            <?php
+            $list = array('Крепко спать','Вкусно есть');
+            Home::showList($list, 0, "myHobbies", "circle" );
+            ?>
+
             <a name="loveMusic"></a>
             <img id="pictureMusic" src="img/music.jpg" width="300px" height="300px" alt="">
-            <script>
-                list("o","loveMusic","a","БИ-2","Brainstorm","Кино","Король и Шут","The Retuses","Мумий Троль","ДДТ")
-            </script>
+
+            <?php
+            $list = array('БИ-2','Brainstorm','Король и Шут', 'The Retuses', 'Мумий Троль', 'ДДТ');
+            Home::showList($list, 1, "loveMusic", "a" );
+            ?>
+
             <a name="loveBook"></a>
             <img id="pictureBooks" src="img/books.png" width="400px" height="300px" alt="">
-            <script>
-                list("u",'loveBooks',"square","Виктор Гюго. Отверженные","Виктор Гюго. Человек, который смеется","Валентин Пикуль. Битва железных канцлеров")
-            </script>
+            <?php
+            $list = array('Виктор Гюго. Отверженные','Виктор Гюго. Человек, который смеется','Валентин Пикуль. Битва железных канцлеров');
+            Home::showList($list, 0, "loveBooks", "square" );
+            ?>
+
             <a name="loveCinema"></a>
             <img id="pictureCinema" src="img/cinema.jpg" width="300px" height="300px" alt="">
-            <script>
-                list("o","loveCinema","1","Король говорит!","Трилогия Хоббит","Трилогия Властелин Колец","Трилогия Матрица","Железная леди","Коллектор","Константин: Повелитель тьмы","Запах женщины")
-            </script>
+
+            <?php
+            $list = array('Король говорит!','Трилогия Хоббит','Трилогия Властелин Колец','Трилогия Матрица','Железная леди','Коллектор','Константин: Повелитель тьмы','Запах женщины');
+            Home::showList($list, 1, "loveCinema", "1" );
+            ?>
+
+
         </section>
     </div>
     <footer>

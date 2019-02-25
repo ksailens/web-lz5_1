@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Персональный сайт Гридасовой Карины. Обо мне.</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Персональный сайт Герцовской Карины. Обо мне.</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script src="script/onMenuHoverBackgr.js"></script>
     <script src="script/sessionStorageHistory.js"></script>
     <script src="script/globalHistory.js"></script>
@@ -14,7 +14,7 @@
         <div class="currentTime" id="currentTime"></div>
         <a name="top"></a>
         <header>
-            <h1>Вы попали на персональный сайт <br> Гридасовой Карины Владиславовны</h1>
+            <h1>Вы попали на персональный сайт <br> Герцовской Карины Владиславовны</h1>
         </header>
         <nav>
             <ul class="mainMenu">
@@ -33,7 +33,7 @@
         </nav>
         <section class="autobiography">
             <h2>Моя автобиография</h2>
-            <p>Я, Гридасова Карина Владиславовна, родилась 13 ноября 1996 года в г.Мелитополь Запорожской области (Украина).</p>
+            <p>Я, Герцовская Карина Владиславовна, родилась 13 ноября 1996 года в г.Мелитополь Запорожской области (Украина).</p>
             <p>Мать - Гридасова Оксана Владимировна.</p>
             <p>Отец - Гридасова Владислав Владимирович.</p>
             <p>В 2002 году я пошла в 1 класс Мелитопольской общеобразовательной щколы I-III уровней №24.

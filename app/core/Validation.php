@@ -82,6 +82,8 @@ class Validation
                 return $this->isInt($field);
             case 'email':
                 return $this->isEmail($field);
+            case 'tel':
+                return $this->isTelephone($field);
             case 'less':
                 return $this->isLess($field, $value);
             case 'greater':
@@ -104,7 +106,12 @@ class Validation
 
     public function isEmail($field)
     {
-        return preg_match('/.+@.+\..+/', $this->_form[$field]);
+        return preg_match('/.+@.+\..+/i', $this->_form[$field]);
+    }
+
+    public function isTelephone($field)
+    {
+        return preg_match('/^(\+7|\+3)[0-9]{9,11}$/', $this->_form[$field]);
     }
 
     public function isLess($field, $value)
@@ -133,6 +140,8 @@ class Validation
                 return 'Значение поля должно быть целочисленным числом. ';
             case 'email':
                 return 'Значение поля не соответсвует формату email. ';
+            case 'tel':
+                return 'Значение поля не соответсвует формату мобильного номера. ';
             case 'less':
                 return 'Значение поля должно быть меньше заданного числа. ';
             case 'greater':
